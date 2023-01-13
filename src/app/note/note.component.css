@@ -1,0 +1,22 @@
+.note {
+  width: 80%;
+}
+.note-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vw;
+}
+
+.note-container:hover .button-container {
+  display: flex;
+}
+
+.button-container{
+  display: none;
+  flex-direction: column;
+  float:right;
+  position: sticky;
+  right: 0;
+  width: fit-content;
+}

@@ -1,1 +1,33 @@
-<p>note works!</p>
+<div class='note-container'>
+  <mat-card class='note'>
+    <mat-card-header>
+      <mat-card-title>Note</mat-card-title>
+      <mat-card-subtitle>Created at: {{note.created_at.toLocaleDateString()}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class='button-container'>
+        <button mat-fab color="primary" aria-label="Button with an edit icon">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-fab color="primary" aria-label="Button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+      <p> Sample text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+      <p>{{ note.textContent }}</p>
+      <img mat-card-xl-image *ngIf='note.image' [src]='note.image.url' alt='Note image' >
+      <mat-divider>
+      </mat-divider>
+      <mat-card-subtitle>Updated at: {{note.updated_at.toLocaleDateString()}} </mat-card-subtitle>
+
+    </mat-card-content>
+
+    <mat-card-footer>
+      <mat-progress-bar mode="determinate" value='100'></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
