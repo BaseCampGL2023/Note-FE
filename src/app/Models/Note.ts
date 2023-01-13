@@ -1,4 +1,7 @@
-class Note {
+import { Tag } from './Tag';
+import { ImageInNote } from './Image';
+
+export class Note {
   constructor(id: number, userId: number, text: string, date: Date, updated: Date, tags: Tag[], image?: ImageInNote) {
     this.id = id;
     this.userId = userId;

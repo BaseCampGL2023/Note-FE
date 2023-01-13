@@ -1,4 +1,4 @@
-class ImageInNote {
+export class ImageInNote {
     constructor(id: number, noteId: number, url: string) {
         this.id = id;
         this.noteId = noteId;
